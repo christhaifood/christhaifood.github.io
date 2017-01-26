@@ -3,12 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | _2D v3</title>
+    <title>Grav-Fest</title>
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- 1st stylesheet is unity's, 2nd is mine -->
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <script src="TemplateData/UnityProgress.js"></script>
   </head>
   <body class="template">
+    <div id="navbar">
+			<nav>
+				
+				<a href="index.html">Home</a>
+				<a href="interests.html">Interests</a>
+				<a href="courses.html">Courses</a>
+				<a href="gravfest.html">Grav Fest</a>
+			</nav>
+		</div>
+    
+    <div id ="header">
+			<h1>Christopher Thai</h1>
+			<img src="https://scontent.fsnc1-5.fna.fbcdn.net/v/t1.0-9/11855888_820631488056276_1758427581791511465_n.jpg?oh=725df128baa82e93b9a424f3e5c27661&oe=58AFA377" class="prof-pic">
+			<img src="https://k0.okccdn.com/php/load_okc_image.php/images/150x150/558x800/0x160/880x1039/0/5439059869242481163.webp?v=2" class="prof-pic">
+			<p>Computer Science nerd. Avid PC gamer. Runner. Food enthusiast </p>
+		</div>
+    
     <div class="template-wrap clear">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
       <br>
@@ -17,19 +35,23 @@
       <div class="title">_2D v3</div>
     </div>
     <script type='text/javascript'>
-  var Module = {
-    TOTAL_MEMORY: 268435456,
-    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
-    compatibilitycheck: null,
-    backgroundColor: "#222C36",
-    splashStyle: "Light",
-    dataUrl: "Release/WebGL SBHacks.data",
-    codeUrl: "Release/WebGL SBHacks.js",
-    asmUrl: "Release/WebGL SBHacks.asm.js",
-    memUrl: "Release/WebGL SBHacks.mem",
-  };
-</script>
-<script src="Release/UnityLoader.js"></script>
+     var Module = {
+        TOTAL_MEMORY: 268435456,
+        errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+        compatibilitycheck: null,
+        backgroundColor: "#222C36",
+        splashStyle: "Light",
+        dataUrl: "Release/WebGL SBHacks.data",
+        codeUrl: "Release/WebGL SBHacks.js",
+        asmUrl: "Release/WebGL SBHacks.asm.js",
+        memUrl: "Release/WebGL SBHacks.mem",
+      };
+    </script>
+    <script src="Release/UnityLoader.js"></script>
 
+    <div id="footer">
+			<a href="https://www.facebook.com/cthaifood"><img class="logo-img" src="https://whatswp.com/wp-content/uploads/2014/04/sh.png"></a>
+			<a href="https://github.com/christhaifood"><img class="logo-img" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"></a>
+		</div>
   </body>
 </html>

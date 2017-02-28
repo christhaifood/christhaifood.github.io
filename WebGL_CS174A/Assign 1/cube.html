@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<script type="text/javascript" src="Common/webgl-utils.js"></script>
+<script type="text/javascript" src="Common/initShaders.js"></script>
+<script type="text/javascript" src="Common/MV.js"></script>
+<script type="text/javascript" src="cube.js"></script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+	attribute vec4 vPosition;
+	uniform mat4 modelViewMatrix;
+
+	void main()
+	{
+
+  	  gl_Position =  modelViewMatrix * vPosition;
+  	  gl_PointSize = 4.0;
+    
+	}
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+	precision mediump float;
+	uniform vec4 vColor;
+
+	void main()
+	{
+    	gl_FragColor = vColor;
+	}
+</script>
+
+
+
+
+<head>
+		<title>Assign 1</title>
+		<link rel="stylesheet" type="text/css" href="../../styles.css">
+</head>
+
+<body>
+<div id="navbar">
+	<nav>
+		
+		<a href="../../index.html">Home</a>
+		<a href="../../interests.html">Interests</a>
+		<a href="../../courses.html">Courses</a>
+		<a href="../../gravfest.html">Grav Fest</a>
+		<a href="../cs174aprojects.html">WebGL Projects</a>
+	</nav>
+</div>
+		
+<div id ="header">
+	<h1>Christopher Thai</h1>
+		<img src="../../formalprofpic.jpg" class="prof-pic">
+		<img src="https://k0.okccdn.com/php/load_okc_image.php/images/150x150/558x800/0x160/880x1039/0/5439059869242481163.webp?v=2" class="prof-pic">
+		<p>Computer Science nerd. Avid PC gamer. Runner. Food enthusiast </p>
+			
+</div>
+
+<br>
+<br>
+
+<canvas id="gl-canvas" width="960"" height="960">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<br/>
+
+<div class="column">
+<h2>Assignment 1: Color Cubes</h2>
+<p>Below are the controls for this assignment:</p>
+<ul>
+	<li>'IJKL' move the camera forward, back, and side-to-side</li>
+	<li>'UP' and 'DOWN' arrow keys move camera up and down</li>
+	<li>'LEFT' and 'RIGHT' arrow keys rotate camera side to side</li>
+	<li>'w' widens field of view. 'n' narrows it.</li>
+	<li>'r' undos any movement and fov changes you have made.</li>
+	<li>'+' toggles a crosshair that appears on the screen.</li>
+	<li>'c' cycles the colors of the cubes.</li>
+</ul>
+<p>Return to the WebGL projects page <a href="../cs174aprojects.html">here</a>.</p>
+</div>
+
+<div id="footer">
+	<a href="https://www.linkedin.com/in/christopher-van-thai"><img class="logo-img" src="https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300"></a>
+    <a href="https://github.com/christhaifood"><img class="logo-img" src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png"></a>
+    <a href="https://www.facebook.com/cthaifood"><img class="logo-img" src="https://whatswp.com/wp-content/uploads/2014/04/sh.png"></a>
+</div>
+</body>
+</html>

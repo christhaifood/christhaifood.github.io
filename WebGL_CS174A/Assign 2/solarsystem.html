@@ -21,17 +21,17 @@ varying vec4 fColor;
 // the result is more rough, but the performance is better in general
 // we'll use per-vertex shading on smooth (but perhaps duller) objects for Gouraud shading
 void main() {
-	
+
 	// light position in camera space
     vec3 pos = (mvMatrix * vec4(vPosition, 1.0)).xyz;
 	vec3 light = (mvLightMatrix * vec4(lightPosition, 1.0)).xyz;
-    L = normalize(light - pos); 
-    E = normalize(-pos);	
-    N = normalize(-mvMatrix * vec4(vNormal, 0.0)).xyz; 
+    L = normalize(light - pos);
+    E = normalize(-pos);
+    N = normalize(-mvMatrix * vec4(vNormal, 0.0)).xyz;
 	gl_Position = pMatrix * vec4(pos, 1.0);
-	
+
 	// perform per-vector Gouraud shading, setting color for vertices and letting fragment shader interpolate
-	
+
 	if (perVertex) {
 		vec3 H = normalize(L + E);
 		vec4 ambient = ambientProduct;
@@ -42,8 +42,8 @@ void main() {
 		fColor = ambient + diffuse + specular;
 		fColor.a  = 1.0;
 	}
-	
-} 
+
+}
 </script>
 
 <script id="fragment-shader" type="x-shader/x-fragment">
@@ -70,7 +70,7 @@ main()
 		vec4 specular = ks * specularProduct2;
 		fColor = ambient + diffuse + specular;
 		fColor.a  = 1.0;
-		
+
 		gl_FragColor = fColor;
 	} else {
     	gl_FragColor = fColor;
@@ -91,7 +91,7 @@ main()
 <body>
 <div id="navbar">
 	<nav>
-		
+
 		<a href="../../index.html">Home</a>
 		<a href="../../interests.html">Interests</a>
 		<a href="../../courses.html">Courses</a>
@@ -99,13 +99,14 @@ main()
 		<a href="../cs174aprojects.html">WebGL Projects</a>
 	</nav>
 </div>
-		
+
 <div id ="header">
 	<h1>Christopher Thai</h1>
-		<img src="../../formalprofpic.jpg" class="prof-pic">
-		<img src="https://k0.okccdn.com/php/load_okc_image.php/images/150x150/558x800/0x160/880x1039/0/5439059869242481163.webp?v=2" class="prof-pic">
+		<img src="../../Pictures/formalprofpic.jpg" class="prof-pic">
+		<img src="../../Pictures/Winter 2017 GME Chamber.jpg" class="prof-pic">
+		<img src="../../Pictures/skiing.jpg" class="prof-pic">
 		<p>Computer Science nerd. Avid PC gamer. Runner. Food enthusiast </p>
-			
+
 </div>
 
 <br>
